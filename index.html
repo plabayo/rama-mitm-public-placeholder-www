@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>rama® MITM Placeholder</title>
+        <meta
+            name="description"
+            content="Placeholder page for mitm.ramaproxy.org when traffic is not connected through a rama MITM proxy."
+        />
+        <style>
+            :root {
+                --rama-primary: #000000;
+                --rama-secondary: #00c800;
+                --rama-text: #ffffff;
+                --rama-text-secondary: #cccccc;
+                --rama-background: #000000;
+                --rama-card-bg: #111111;
+                --rama-border: #333333;
+                --rama-hover: #00c800;
+                --rama-shadow: rgba(0, 200, 0, 0.2);
+            }
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            html {
+                font-family:
+                    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                    "Helvetica Neue", Arial, sans-serif;
+                font-size: 16px;
+                line-height: 1.5;
+                color: var(--rama-text);
+                background-color: var(--rama-background);
+            }
+
+            body {
+                min-height: 100%;
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 2rem;
+            }
+
+            main {
+                min-height: calc(100vh - 4rem);
+                margin: 0 auto;
+                display: grid;
+                align-content: center;
+            }
+
+            .eyebrow {
+                display: inline-block;
+                margin-bottom: 1.5rem;
+                padding: 0.45rem 0.75rem;
+                border: 1px solid var(--rama-border);
+                border-radius: 999px;
+                background-color: var(--rama-card-bg);
+                color: var(--rama-text-secondary);
+                font-family:
+                    ui-monospace, "SFMono-Regular", "SF Mono", Menlo, Consolas,
+                    monospace;
+                font-size: 0.72rem;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .hero {
+                text-align: center;
+                background-color: var(--rama-card-bg);
+                border: 1px solid var(--rama-border);
+                border-radius: 8px;
+                padding: 3rem 2rem;
+                box-shadow:
+                    0 0 0 1px rgba(0, 200, 0, 0.03),
+                    0 12px 32px rgba(0, 0, 0, 0.35);
+            }
+
+            h1 {
+                margin: 0 0 1rem;
+                font-size: clamp(3rem, 8vw, 3.5rem);
+                line-height: 1;
+                color: var(--rama-secondary);
+            }
+
+            p {
+                max-width: 800px;
+                margin: 0 auto 1.25rem;
+                font-size: 1.25rem;
+                color: var(--rama-text-secondary);
+            }
+
+            .note {
+                margin: 2rem auto 0;
+                max-width: 800px;
+                padding: 1rem 1.25rem;
+                border: 1px solid var(--rama-border);
+                border-radius: 8px;
+                background-color: var(--rama-background);
+            }
+
+            .muted,
+            footer {
+                color: var(--rama-text-secondary);
+                font-size: 0.95rem;
+            }
+
+            a {
+                color: var(--rama-secondary);
+                text-decoration: none;
+                position: relative;
+                transition: color 0.2s ease;
+            }
+
+            a::after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 1px;
+                bottom: -2px;
+                left: 0;
+                background-color: var(--rama-secondary);
+                transform: scaleX(0);
+                transform-origin: bottom right;
+                transition: transform 0.3s ease-out;
+            }
+
+            a:hover {
+                color: var(--rama-hover);
+            }
+
+            a:hover::after {
+                transform: scaleX(1);
+                transform-origin: bottom left;
+            }
+
+            a:visited {
+                color: var(--rama-secondary);
+            }
+
+            strong {
+                color: var(--rama-text);
+                font-weight: 600;
+            }
+
+            sup {
+                font-size: 0.6em;
+                vertical-align: super;
+                line-height: 1;
+                margin-left: 5px;
+            }
+
+            footer {
+                text-align: center;
+                padding: 2rem 0 0;
+                border-top: 1px solid var(--rama-border);
+                margin-top: 2rem;
+            }
+
+            @media (max-width: 768px) {
+                body {
+                    padding: 1rem;
+                }
+
+                .hero {
+                    padding: 2rem 1.25rem;
+                }
+
+                h1 {
+                    font-size: 2.5rem;
+                }
+
+                p {
+                    font-size: 1.1rem;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <section class="hero">
+                <div class="eyebrow">MITM Placeholder Service</div>
+                <h1>
+                    <a href="https://ramaproxy.org/">rama<sup>®</sup></a>
+                </h1>
+                <p>
+                    If you see this page, you are not connected through a MITM
+                    proxy built with
+                    <a href="https://ramaproxy.org/">rama</a> that uses
+                    <strong>mitm.ramaproxy.org</strong> as its hijack HTTP(S)
+                    service.
+                </p>
+                <p>Please contact your administrator.</p>
+                <div class="note">
+                    <p class="muted">
+                        This domain only serves a minimal public placeholder for
+                        direct HTTP and HTTPS traffic.
+                    </p>
+                    <p class="muted">
+                        Hosting of this placeholder service is generously
+                        sponsored by GitHub (pages).
+                    </p>
+                </div>
+            </section>
+            <footer>
+                <a href="https://ramaproxy.org/">rama<sup>®</sup></a> is a
+                trademark of Plabayo.
+            </footer>
+        </main>
+    </body>
+</html>
